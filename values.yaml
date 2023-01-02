@@ -1,0 +1,23 @@
+appName: semaphore-app
+namespace: sanjai
+image:
+  name: ansiblesemaphore/semaphore
+  tag: latest
+configmap:
+  name: myconf
+  data:
+    SEMAPHORE_DB_NAME: "semaphore"
+    SEMAPHORE_DB_HOST: "postgres.czevnwydl1pb.us-east-1.rds.amazonaws.com"
+    SEMAPHORE_DB_PORT: "5432"
+    SEMAPHORE_DB_DIALECT: "postgres"
+    SEMAPHORE_ADMIN_EMAIL: "admin@localhost"
+    SEMAPHORE_ADMIN: "admin"
+    SEMAPHORE_ACCESS_KEY_ENCRYPTION: "flWgeazji4U3Wpprn+qsFi94SiIlcBFcCuc4OJyxCrg="
+secret:
+  name: secret
+  data:
+  SEMAPHORE_DB_USER: cG9zdGdyZXM=
+  SEMAPHORE_DB_PASS: cG9zdGdyZXM=
+  SEMAPHORE_ADMIN_PASSWORD: Y2hhbmdlbWU=
+  SEMAPHORE_ADMIN_NAME: YWRtaW4=
+  SEMAPHORE_LDAP_PASSWORD: J2xkYXBfYmluZF9hY2NvdW50X3Bhc3N3b3JkJw==

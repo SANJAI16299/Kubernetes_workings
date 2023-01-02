@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name }}
+  namespace: {{ .Values.namespace }}
+data:
+  SEMAPHORE_DB_NAME: {{ .Values.configmap.data.SEMAPHORE_DB_NAME }}
+  SEMAPHORE_DB_HOST: {{ .Values.configmap.data.SEMAPHORE_DB_HOST }}
+  SEMAPHORE_DB_PORT: {{ .Values.configmap.data.SEMAPHORE_DB_PORT }}
+  SEMAPHORE_DB_DIALECT: {{ .Values.configmap.data.SEMAPHORE_DB_DIALECT }}
+  SEMAPHORE_ADMIN_EMAIL: {{ .Values.configmap.data.SEMAPHORE_ADMIN_EMAIL }}
+  SEMAPHORE_ADMIN: {{ .Values.configmap.data.SEMAPHORE_ADMIN }}
+  SEMAPHORE_ACCESS_KEY_ENCRYPTION: {{ .Values.configmap.data.SEMAPHORE_ACCESS_KEY_ENCRYPTION }}
